@@ -1,29 +1,37 @@
 import 'dart:io';
-void main(){
-  print(" enter your first number");
- int? a=int.parse(stdin.readLineSync()!);
+int main(){
+ while(true){
+    print(" enter your first number");
+  String? input1 =stdin.readLineSync();
+  if (input1 == 'exit')
+  {
+    print('app ended');
+    return 0;
+  }
+  
 
- while(a != exit){
   print(" enter your second number");
- int? b=int.parse(stdin.readLineSync()!);
-
+ String? input2 =stdin.readLineSync();
+int num1 ,num2;
+num1 =int.parse(input1!);
+num2 =int.parse(input2!);
   print(" enter  the operator ( *,+,-,/)");
     String? op = stdin.readLineSync();
       switch (op) {
       case '+':
-         print(" result = ${a+b}");
+         print(" result = ${num1+num2}");
         break;
       case '-':
-         print(" result = ${a-b}");
+         print(" result = ${num1-num2}");
         break;
       case '*':
-         print(" result = ${a*b}");
+         print(" result = ${num1*num2}");
         break;
       case '/':
-         print(" result = ${a/b}");
+         print(" result = ${num1/num2}");
         break;
       default:
-      print(" exit");
+      print(" exit ");
       break;
 }
 }}
